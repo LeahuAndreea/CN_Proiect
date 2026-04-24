@@ -7,11 +7,11 @@ module control_unit (
     input  wire       s_q_neg1,     // Q_1 curent
     input  wire       s_b_cnt_zero,
 
-    input  wire       s_a_neg,      // A[7] = 1 (A negativ dupa shift)
-    input  wire       s_d_cnt_zero, // counter DIV = 0
-    input  wire       s_div_zero,   // divisor = 0
+    input  wire       s_a_neg,     
+    input  wire       s_d_cnt_zero, 
+    input  wire       s_div_zero,   
 
-    output reg        c_load_ops,   // incarca reg_A si reg_B din INBUS
+    output reg        c_load_ops,   
 
     output reg        c_b_load_M,   // C0
     output reg        c_b_load_AQ,  // C1
@@ -31,7 +31,7 @@ module control_unit (
     output reg        c_d_cnt_dec,  // C7
 
     output reg        done,         // C9/C10: calculul s-a terminat
-    output reg        err_div_zero  // eroare impartire la zero
+    output reg        err_div_zero 
 );
 
     localparam IDLE        = 5'd0;
@@ -60,7 +60,7 @@ module control_unit (
         else     state <= nxt;
 
     always @(*) begin
-        nxt = state;  // implicit: ramane in aceeasi stare
+        nxt = state;  
         case (state)
             IDLE:
                 nxt = start ? LOAD_OPS : IDLE;

@@ -5,14 +5,14 @@ module dsr_shift (
     input  wire       clr,
     input  wire       shr,
     input  wire       shl,
-    input  wire       set_lsb,  // Seteaza bitul 0 (folosit in impartire pentru Q[0])
-    input  wire [7:0] d,        // Date paralele de incarcat
-    input  wire       sin_r,    // Serial in pentru SHR (noul MSB)
-    input  wire       sin_l,    // Serial in pentru SHL (noul LSB)
-    input  wire       lsb_val,  // Valoarea de scris in q[0] cand set_lsb=1
+    input  wire       set_lsb,  
+    input  wire [7:0] d,       
+    input  wire       sin_r,    
+    input  wire       sin_l,    
+    input  wire       lsb_val,  
     output wire [7:0] q,
-    output wire       sout_r,   // q[0] - folosit ca serial in pentru urmatorul registru la SHR
-    output wire       sout_l    // q[7] - folosit ca serial in pentru urmatorul registru la SHL
+    output wire       sout_r,   
+    output wire       sout_l    
 );
     reg [7:0] q_reg;
 

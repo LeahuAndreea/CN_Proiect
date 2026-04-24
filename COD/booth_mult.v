@@ -46,7 +46,7 @@ module booth_mult (
         .load(A_load_en), .clr(1'b0),
         .shr(c_shift), .shl(1'b0), .set_lsb(1'b0),
         .d(A_load_val),
-        .sin_r(A_q[7]),   // extensie semn la ASR
+        .sin_r(A_q[7]),  
         .sin_l(1'b0), .lsb_val(1'b0),
         .q(A_q), .sout_r(), .sout_l()
     );
@@ -57,7 +57,7 @@ module booth_mult (
         .load(c_load_AQ), .clr(1'b0),
         .shr(c_shift), .shl(1'b0), .set_lsb(1'b0),
         .d(multiplier),
-        .sin_r(A_q[0]),   // A[0] (inainte de shift) devine noul MSB al Q
+        .sin_r(A_q[0]),   
         .sin_l(1'b0), .lsb_val(1'b0),
         .q(Q_q), .sout_r(), .sout_l()
     );
