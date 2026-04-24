@@ -112,7 +112,6 @@ module control_unit (
     end
 
     always @(*) begin
-        // Toate semnalele dezactivate implicit
         c_load_ops    = 1'b0;
         c_b_load_M    = 1'b0;
         c_b_load_AQ   = 1'b0;
