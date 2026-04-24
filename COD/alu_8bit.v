@@ -3,11 +3,11 @@ module alu_8bit (
     input  wire       rst,
     input  wire       start,
     input  wire [1:0] opcode,
-    input  wire [7:0] operand_a,       // INBUS operand A
-    input  wire [7:0] operand_b,       // INBUS operand B
-    output wire [15:0] result,         // RESULT BUS [15:0]
-    output wire        carry_out,      // Carry (ADD/SUB)
-    output wire        overflow,       // Overflow semnat
+    input  wire [7:0] operand_a,      
+    input  wire [7:0] operand_b,       
+    output wire [15:0] result,         
+    output wire        carry_out,      
+    output wire        overflow,       
     output wire        alu_done,
     output wire        div_zero
 );
